@@ -18,12 +18,12 @@ import statsmodels.tsa.api as smt
 from sklearn.metrics import mean_absolute_error
 from itertools import product
 from tqdm import tqdm_notebook
+from statsmodels.graphics.tsaplots import plot_acf
 
 # %%
-path = '/usr/local/google/home/bneella/Desktop/TimeSeriesAnalysis/'
+path = '/usr/local/google/home/bneella/Workspace/Python/TimeSeriesAnalysis/'
 data = pd.read_csv(path + 'data/stock_prices_sample.csv')
 data.head()
-
 # %%
 # Let's take DATE as index col and read the file again
 data = pd.read_csv(path + 'data/stock_prices_sample.csv', index_col=['DATE'], parse_dates=['DATE'])
